@@ -7,12 +7,15 @@ import io.quarkus.qute.TemplateInstance;
 
 import java.util.List;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
+
+import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+@ApplicationScoped
 @Path("/")
 public class VetResource {
     
