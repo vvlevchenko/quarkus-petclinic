@@ -9,14 +9,8 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-import javax.persistence.Transient;
-import javax.validation.constraints.NotEmpty;
-
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotEmpty;
 import org.quarkus.samples.petclinic.visit.Visit;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
@@ -52,6 +46,10 @@ public class Pet extends PanacheEntity {
 			this.visits = new HashSet<>();
 		}
 		return this.visits;
+	}
+
+	public Set<Visit> getVisits() {
+		return getVisitsInternal();
 	}
 
 	protected void setVisitsInternal(Collection<Visit> visits) {

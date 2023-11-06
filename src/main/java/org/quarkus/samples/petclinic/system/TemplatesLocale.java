@@ -1,12 +1,11 @@
 package org.quarkus.samples.petclinic.system;
 
-import javax.enterprise.context.ApplicationScoped;
-
 import java.util.Collection;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
+import jakarta.enterprise.context.ApplicationScoped;
 import org.quarkus.samples.petclinic.owner.Owner;
 import org.quarkus.samples.petclinic.owner.Pet;
 import org.quarkus.samples.petclinic.owner.PetType;

@@ -3,9 +3,8 @@ package org.quarkus.samples.petclinic.system;
 import java.nio.charset.StandardCharsets;
 import java.util.Locale;
 
-import javax.ws.rs.core.MediaType;
-
 import io.quarkus.qute.Variant;
+import jakarta.ws.rs.core.MediaType;
 
 public class LocaleVariantCreator {
     

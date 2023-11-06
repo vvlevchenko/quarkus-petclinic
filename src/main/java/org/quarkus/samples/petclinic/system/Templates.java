@@ -13,9 +13,6 @@ import org.quarkus.samples.petclinic.visit.Visit;
 import io.quarkus.qute.CheckedTemplate;
 import io.quarkus.qute.TemplateInstance;
 
-import javax.enterprise.context.ApplicationScoped;
-
-@ApplicationScoped
 @CheckedTemplate
 public class Templates {
     public static native TemplateInstance welcome();

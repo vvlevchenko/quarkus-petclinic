@@ -3,13 +3,12 @@ package org.quarkus.samples.petclinic.visit;
 import java.time.LocalDate;
 import java.util.Collection;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.validation.constraints.NotEmpty;
-import javax.ws.rs.FormParam;
-
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.ws.rs.FormParam;
 
 @Entity
 @Table(name = "visits")

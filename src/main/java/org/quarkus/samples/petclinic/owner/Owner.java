@@ -1,19 +1,13 @@
 package org.quarkus.samples.petclinic.owner;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import javax.validation.constraints.Digits;
-import javax.validation.constraints.NotEmpty;
-import javax.ws.rs.FormParam;
+import jakarta.persistence.*;
 
+
+import jakarta.validation.constraints.Digits;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.ws.rs.FormParam;
 import org.quarkus.samples.petclinic.model.Person;
 
 @Entity
@@ -36,7 +30,7 @@ public class Owner extends Person {
     @FormParam("telephone")
     public String telephone;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner", fetch = FetchType.EAGER) // it is eager but probably it could be changed to lazy and make some lazy load before rendering template but we might end up in similar performance
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner", fetch = FetchType.LAZY) // it is eager but probably it could be changed to lazy and make some lazy load before rendering template but we might end up in similar performance
     public Set<Pet> pets;
 
     public static Collection<Owner> findByLastName(String name) {

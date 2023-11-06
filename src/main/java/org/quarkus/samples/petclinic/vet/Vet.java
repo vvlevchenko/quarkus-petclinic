@@ -6,13 +6,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinTable;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
 
+import jakarta.persistence.*;
 import org.quarkus.samples.petclinic.model.Person;
 
 @Entity

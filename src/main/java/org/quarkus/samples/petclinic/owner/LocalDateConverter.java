@@ -1,8 +1,8 @@
 package org.quarkus.samples.petclinic.owner;
 
-import java.time.LocalDate;
+import jakarta.ws.rs.ext.ParamConverter;
 
-import javax.ws.rs.ext.ParamConverter;
+import java.time.LocalDate;
 
 public class LocalDateConverter implements ParamConverter<LocalDate> {
 

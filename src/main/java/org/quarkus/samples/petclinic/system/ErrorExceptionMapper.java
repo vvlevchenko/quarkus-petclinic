@@ -1,9 +1,9 @@
 package org.quarkus.samples.petclinic.system;
 
 import jakarta.inject.Inject;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.ext.ExceptionMapper;
 
+import jakarta.ws.rs.core.Response;
+import jakarta.ws.rs.ext.ExceptionMapper;
 import org.jboss.logging.Logger;
 import org.jboss.resteasy.reactive.server.ServerExceptionMapper;
 
